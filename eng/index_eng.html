@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../img/fav.png" type="image/png" sizes="64x64">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Alena | Frontend-developer</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../css/hover-min.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+
+    <link rel="stylesheet" href="../css/light-theme.min.css" id="selectedEng-theme"/>
+    <link rel="stylesheet" href="../css/adaptive.min.css"/>
+</head>
+<body>
+<header class="header wow animate__fadeInDown">
+    <div class="container">
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="#">Homepage</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#aboutme">About me</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#skills">Skills</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#portfolio">Portfolio</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#partner">Partnership</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#contacts">Contacts</a>
+                </li>
+            </ul>
+            <div class="close hvr-bounce-in wow animate__rotateIn">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+			c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+			c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+			L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+			c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+			c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+			c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z"/>
+	</g>
+</g>
+</svg>
+            </div>
+            <div class="change-functions">
+                <div class="change-mode">
+                    <button class="button mode light" id="mode-light">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/>
+                        </svg>
+                    </button>
+                    <button class="button mode dark" id="mode-dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="change-lang">
+                    <a href="../index.html">RU</a>
+                    <span>|</span>
+                    <a href="#" class="active">ENG</a>
+                </div>
+            </div>
+        </nav>
+        <div class="burger" id="burger">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+            </svg>
+        </div>
+        <div class="line"></div>
+    </div>
+</header>
+
+<main>
+    <section class="main animate__animated animate__zoomIn">
+        <div class="container">
+            <div class="main__info">
+                <h1 class="name">Alena Vorobyeva</h1>
+                <div class="description">
+                    <p class="first-line">Frontend-developer<br>
+                        25 years old, Russia</p>
+                </div>
+            </div>
+            <div class="main__photo">
+                <img src="../img/me.JPG" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="about" id="aboutme">
+        <div class="container wow animate__fadeInUp">
+            <h2 class="about__title">About me</h2>
+            <div class="about__description">
+                <p>Hi, I am Alena — beginner in frontend-development. Interested in development at all and everything
+                    connected to it 🩶
+                </p>
+                <p>
+                    I study at the best online-school of IT-professions "Itlogia".
+                </p>
+                <p>
+                    I am ready to implement the acquired knowledge and skills, to invest 100% of my strength and energy
+                    to my future projects.
+                </p>
+                <p>
+                    I guarantee high quality work and comfortable cooperation!
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="skills" id="skills">
+        <div class="container wow animate__fadeInUp">
+            <h2 class="skills__title">My skills</h2>
+            <div class="skills__description">
+                <p>In my work I use modern layout tools that allow me to create
+                    websites with convenient functionality and nice visuals.
+                </p>
+                <p>
+                    My advantage is that I don't use website builders, but write the code manually 👩🏻‍💻
+                    <br>
+                    This, in turn, opens up more opportunities for creating a unique site.
+                </p>
+            </div>
+            <div class="skills__list">
+                <div class="skill__item">
+                    <div class="skill__title">
+                        <h4 class="skill-title">HTML5</h4>
+                        <div class="skill-percentage">
+                            <div class="count-box counted"><span class="count-text" data-speed="2000"
+                                                                 data-stop="86">86</span>%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress progress-anim-1" role="progressbar" aria-label="Basic example"
+                         aria-valuenow="86"
+                         aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-dark" style="width: 86%"></div>
+                    </div>
+                </div>
+                <div class="skill__item">
+                    <div class="skill__title">
+                        <h4 class="skill-title">CSS3</h4>
+                        <div class="skill-percentage">
+                            <div class="count-box counted"><span class="count-text" data-speed="2000"
+                                                                 data-stop="90">90</span>%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress progress-anim-2" role="progressbar" aria-label="Basic example"
+                         aria-valuenow="90"
+                         aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-dark" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill__item">
+                    <div class="skill__title">
+                        <h4 class="skill-title">SASS/LESS</h4>
+                        <div class="skill-percentage">
+                            <div class="count-box counted"><span class="count-text" data-speed="2000"
+                                                                 data-stop="90">90</span>%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress progress-anim-3" role="progressbar" aria-label="Basic example"
+                         aria-valuenow="90"
+                         aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-dark" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill__item">
+                    <div class="skill__title">
+                        <h4 class="skill-title">JavaScript/jQuery</h4>
+                        <div class="skill-percentage">
+                            <div class="count-box counted"><span class="count-text" data-speed="2000"
+                                                                 data-stop="55">55</span>%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress progress-anim-4" role="progressbar" aria-label="Basic example"
+                         aria-valuenow="55"
+                         aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-dark" style="width: 55%"></div>
+                    </div>
+                </div>
+                <div class="skill__item">
+                    <div class="skill__title">
+                        <h4 class="skill-title">Bootstrap 5</h4>
+                        <div class="skill-percentage">
+                            <div class="count-box counted"><span class="count-text" data-speed="2000"
+                                                                 data-stop="71">71</span>%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress progress-anim-5" role="progressbar" aria-label="Basic example"
+                         aria-valuenow="71"
+                         aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-dark" style="width: 71%"></div>
+                    </div>
+                </div>
+                <div class="skill__item">
+                    <div class="skill__title">
+                        <h4 class="skill-title">NPM package manager</h4>
+                        <div class="skill-percentage">
+                            <div class="count-box counted"><span class="count-text" data-speed="2000"
+                                                                 data-stop="99">99</span>%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress progress-anim-6" role="progressbar" aria-label="Basic example"
+                         aria-valuenow="99"
+                         aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-dark" style="width: 99%"></div>
+                    </div>
+                </div>
+                <div class="skill__item">
+                    <div class="skill__title">
+                        <h4 class="skill-title">Node.js</h4>
+                        <div class="skill-percentage">
+                            <div class="count-box counted"><span class="count-text" data-speed="2000"
+                                                                 data-stop="83">83</span>%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress progress-anim-7" role="progressbar" aria-label="Basic example"
+                         aria-valuenow="83"
+                         aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-dark" style="width: 83%"></div>
+                    </div>
+                </div>
+                <div class="skill__item">
+                    <div class="skill__title">
+                        <h4 class="skill-title">Git</h4>
+                        <div class="skill-percentage">
+                            <div class="count-box counted"><span class="count-text" data-speed="2000"
+                                                                 data-stop="50">50</span>%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress progress-anim-8" role="progressbar" aria-label="Basic example"
+                         aria-valuenow="50"
+                         aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-dark" style="width: 50%"></div>
+                    </div>
+                </div>
+                <div class="skill__item">
+                    <div class="skill__title">
+                        <h4 class="skill-title">Figma/Adobe Photoshop</h4>
+                        <div class="skill-percentage">
+                            <div class="count-box counted"><span class="count-text" data-speed="2000"
+                                                                 data-stop="45">45</span>%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress progress-anim-9" role="progressbar" aria-label="Basic example"
+                         aria-valuenow="45"
+                         aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-dark" style="width: 45%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<section class="portfolio" id="portfolio">
+    <div class="container wow animate__fadeIn">
+        <h2 class="portfolio__title">Portfolio</h2>
+        <div class="portfolio__items">
+            <div class="portfolio__item">
+                <div class="portfolio__item-image hvr-grow">
+                    <img src="../img/portfolio/Quiz_cover.png" alt="">
+                    <div class="info-icon hvr-bounce-in">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="portfolio__item-info">
+                    <div class="container animate__animated animate__zoomIn">
+                        <div class="portfolio__item-content">
+                            <div class="content__description">
+                                <div class="content__left">
+                                    <img src="../img/portfolio/Quiz_full.png" alt="">
+                                </div>
+                                <div class="content__right">
+                                    <div class="cancel hvr-grow-rotate">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                            <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+                                        </svg>
+                                    </div>
+                                    <p class="content__title">JavaScript knowledge quiz</p>
+                                    <div class="content__text">
+                                        <p>
+                                            The quiz is displayed correctly on all screen sizes (320px-1920px).
+                                        </p>
+                                        <p>
+                                            The code is written in pure JavaScript.
+                                        </p>
+                                        <p>
+                                            The work presents continuous work both with data requests from servers and
+                                            with sending data to it.
+                                        </p>
+                                        <p>
+                                            Want to highlight the following points that are present in the work:</br>
+                                            ● the user registration form is validated using regular expressions;</br>
+                                            ● the data entered by the user during registration is stored in
+                                            SessionStorage;</br>
+                                            ● all dynamic data (test's names, questions in tests, answer options,
+                                            etc.) are created using JavaScript, as DOM elements;</br>
+                                            ● the content of the elements is taken from the server, by GET
+                                            requests;</br>
+                                            ● configured logic for moving between questions
+                                            (back/next/skip/finish);</br>
+                                            ● user's chosen answer options are saved;</br>
+                                            ● the result is generated based on the answer options identifiers selected by the user;</br>
+                                            ● correct/incorrect answers are shown to the user based on the results of
+                                            comparing the selected answer options IDs with the correct answers on the
+                                            test, that are received by a GET request from the server.
+                                        </p>
+                                        <p><b>
+                                            To experience all the functionality, you can go to the site mentioned
+                                            below.</b>
+                                        </p>
+                                    </div>
+                                    <a href="https://alvorobyova.github.io/quiz/" class="button content"
+                                       target="_blank">Go to the website</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio__item">
+                <div class="portfolio__item-image hvr-grow">
+                    <img src="../img/portfolio/Macaroons_cover1.png" alt="">
+                    <div class="info-icon hvr-bounce-in">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             style="fill:white;" viewBox="0 0 512 512">
+                            <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="portfolio__item-info">
+                    <div class="container animate__animated animate__zoomIn">
+                        <div class="portfolio__item-content">
+                            <div class="content__description">
+                                <div class="content__left">
+                                    <img src="../img/portfolio/Macaroons_fullscreen.png" alt="">
+                                </div>
+                                <div class="content__right">
+                                    <div class="cancel hvr-grow-rotate">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                            <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+                                        </svg>
+                                    </div>
+                                    <p class="content__title">Site for macaroons order</p>
+                                    <div class="content__text">
+                                        <p>
+                                            The work is done using Flexbox and Grid.
+                                            Available for use on devices of all sizes.
+                                        </p>
+                                        <p>
+                                            ● Animations added and styling is done for various element states. Generally
+                                            stylization written using the LESS preprocessor.
+                                            The project is assembled by project's assemblers (Gulp / Grunt) -
+                                            both option are functioning.
+                                        </p>
+                                        <p>
+                                            ● Form validation done with jQuery(Ajax).
+                                            Upon successful submission of data, instead of the form, a block appears
+                                            with a successful
+                                            registration order.
+                                            If the inputs are not filled in, the user will see the corresponding
+                                            warnings.
+                                            Mask for the phone input added.</p>
+                                    </div>
+                                    <a href="https://alvorobyova.github.io/macaroons_less/" class="button content"
+                                       target="_blank">Go to the website</a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio__item">
+                <div class="portfolio__item-image hvr-grow">
+                    <img src="../img/portfolio/Cappadocia_cover.png" alt="">
+                    <div class="info-icon hvr-bounce-in">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             style="fill:white;" viewBox="0 0 512 512">
+                            <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="portfolio__item-info">
+                    <div class="container animate__animated animate__zoomIn">
+                        <div class="portfolio__item-content">
+                            <div class="content__description">
+                                <div class="content__left">
+                                    <img src="../img/portfolio/Cappadocia_fullscreen.png" alt="">
+                                </div>
+                                <div class="content__right">
+                                    <div class="cancel hvr-grow-rotate">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                            <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+                                        </svg>
+                                    </div>
+                                    <p class="content__title">Cappadocia tour</p>
+                                    <div class="content__text">
+                                        <p>
+                                            The website has been built from scratch, without adaptive versions.
+                                        </p>
+                                        <p>
+                                            Grid layout or Flexbox were not used in the project, in this case, the
+                                            skills of using element’s positioning (absolute/relative/fixed) elements
+                                            were practiced.</p>
+                                    </div>
+                                    <a href="https://alvorobyova.github.io/cappadocia/" class="button content"
+                                       target="_blank">Go the website</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio__item">
+                <div class="portfolio__item-image hvr-grow">
+                    <img src="../img/portfolio/Konstruct_cover.png" alt="">
+                    <div class="info-icon hvr-bounce-in">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             style="fill:white;" viewBox="0 0 512 512">
+                            <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="portfolio__item-info">
+                    <div class="container animate__animated animate__zoomIn">
+                        <div class="portfolio__item-content">
+                            <div class="content__description">
+                                <div class="content__left" style="display: flex; align-items: center">
+                                    <img src="../img/portfolio/Konstruct_fullscreen.png" alt="">
+                                </div>
+                                <div class="content__right">
+                                    <div class="cancel hvr-grow-rotate">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                            <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+                                        </svg>
+                                    </div>
+                                    <p class="content__title">Example of company's business card</p>
+                                    <div class="content__text">
+                                        <p>Adaptive layouts are available.</p>
+                                        <p>Flexbox/Grid Layout technologies was used.</p>
+
+                                        <p>Styles are written using the LESS preprocessor.</p>
+
+                                    </div>
+                                    <a href="https://alvorobyova.github.io/konstruct/" class="button content"
+                                       target="_blank">Go to the website</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="button portfolio hvr-bounce-in"><a href="../portfolio/portfolio_eng.html">See more projects</a>
+        </button>
+    </div>
+</section>
+
+<section class="partnership" id="partner">
+    <div class="container wow animate__fadeIn">
+        <h2 class="partnership__title">Partnership</h2>
+        <div class="partnership__items">
+            <div class="partnership__item">
+                <div class="partnership__item-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                        <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path d="M64 64a64 64 0 1 1 128 0A64 64 0 1 1 64 64zM25.9 233.4C29.3 191.9 64 160 105.6 160h44.8c27 0 51 13.4 65.5 34.1c-2.7 1.9-5.2 4-7.5 6.3l-64 64c-21.9 21.9-21.9 57.3 0 79.2L192 391.2V464c0 26.5-21.5 48-48 48H112c-26.5 0-48-21.5-48-48V348.3c-26.5-9.5-44.7-35.8-42.2-65.6l4.1-49.3zM448 64a64 64 0 1 1 128 0A64 64 0 1 1 448 64zM431.6 200.4c-2.3-2.3-4.9-4.4-7.5-6.3c14.5-20.7 38.6-34.1 65.5-34.1h44.8c41.6 0 76.3 31.9 79.7 73.4l4.1 49.3c2.5 29.8-15.7 56.1-42.2 65.6V464c0 26.5-21.5 48-48 48H496c-26.5 0-48-21.5-48-48V391.2l47.6-47.6c21.9-21.9 21.9-57.3 0-79.2l-64-64zM272 240v32h96V240c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2l64 64c9.4 9.4 9.4 24.6 0 33.9l-64 64c-6.9 6.9-17.2 8.9-26.2 5.2s-14.8-12.5-14.8-22.2V336H272v32c0 9.7-5.8 18.5-14.8 22.2s-19.3 1.7-26.2-5.2l-64-64c-9.4-9.4-9.4-24.6 0-33.9l64-64c6.9-6.9 17.2-8.9 26.2-5.2s14.8 12.5 14.8 22.2z"/>
+                    </svg>
+                </div>
+                <div class="partnership__item-text">
+                    I am open to partnerships with other developers or web studios. I will be glad to cooperate with
+                    those
+                    who is interested in creating high-quality websites on mutually beneficial terms.
+                </div>
+            </div>
+            <div class="partnership__item">
+                <div class="partnership__item-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path d="M152.1 38.2c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L7 113C-2.3 103.6-2.3 88.4 7 79s24.6-9.4 33.9 0l22.1 22.1 55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zm0 160c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L7 273c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l22.1 22.1 55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zM224 96c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32zM160 416c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H192c-17.7 0-32-14.3-32-32zM48 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
+                    </svg>
+                </div>
+                <div class="partnership__item-text">
+                    If you have clients who need to develop websites, but you do not have enough time and energy for
+                    solving all issues on your own, you can delegate your tasks to me.
+                </div>
+            </div>
+            <div class="partnership__item">
+                <div class="partnership__item-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path d="M156.6 384.9L125.7 354c-8.5-8.5-11.5-20.8-7.7-32.2c3-8.9 7-20.5 11.8-33.8L24 288c-8.6 0-16.6-4.6-20.9-12.1s-4.2-16.7 .2-24.1l52.5-88.5c13-21.9 36.5-35.3 61.9-35.3l82.3 0c2.4-4 4.8-7.7 7.2-11.3C289.1-4.1 411.1-8.1 483.9 5.3c11.6 2.1 20.6 11.2 22.8 22.8c13.4 72.9 9.3 194.8-111.4 276.7c-3.5 2.4-7.3 4.8-11.3 7.2v82.3c0 25.4-13.4 49-35.3 61.9l-88.5 52.5c-7.4 4.4-16.6 4.5-24.1 .2s-12.1-12.2-12.1-20.9V380.8c-14.1 4.9-26.4 8.9-35.7 11.9c-11.2 3.6-23.4 .5-31.8-7.8zM384 168a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/>
+                    </svg>
+                </div>
+                <div class="partnership__item-text">
+                    I will be happy to consider proposals for cooperation in the development of startups.
+                    I am very Interested and motivated to participate in such projects especially on a long-term basis.
+                </div>
+            </div>
+        </div>
+        <div class="partnership__text">
+            Always ready to discuss any production and commercial issues.<br>
+            I guarantee a decent and reliable partnership, as well as the good quality of the work performed.
+        </div>
+    </div>
+</section>
+
+<section class="contacts" id="contacts">
+    <div class="container wow animate__fadeIn">
+        <h2 class="contacts__title">Contacts</h2>
+        <p class="contacts__text">Want to know more or just chat?</p>
+        <p class="contacts__text">You are welcome!</p>
+        <button class="button contacts hvr-bounce-in"><a href="https://t.me/alvorobyova" target="_blank">Send message</a></button>
+        <div class="contacts__items">
+            <a href="https://t.me/alvorobyova" class="contact" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                    <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8ZM362.952,176.66c-3.732,39.215-19.881,134.378-28.1,178.3-3.476,18.584-10.322,24.816-16.948,25.425-14.4,1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25,5.342-39.5,3.652-3.793,67.107-61.51,68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608,69.142-14.845,10.194-26.894,9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7,18.45-13.7,108.446-47.248,144.628-62.3c68.872-28.647,83.183-33.623,92.511-33.789,2.052-.034,6.639.474,9.61,2.885a10.452,10.452,0,0,1,3.53,6.716A43.765,43.765,0,0,1,362.952,176.66Z"/>
+                </svg>
+            </a>
+            <a href="https://wa.me/79146403009" class="contact" target="_blank">
+                <img src="../img/whatsapp.png" alt="">
+            </a>
+            <a href="https://instagram.com/al.vorobyova" class="contact" target="_blank">
+                <img src="../img/instagram.png" alt="">
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p class="footer__rights">© All rights are reserved, 2023</p>
+    </div>
+</footer>
+
+<button class="scroll-to-top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>
+</button>
+
+<script src="../scripts/jquery-3.6.3.min.js"></script>
+<script src="../scripts/wow.min.js"></script>
+
+<script src="../scripts/bootstrap.min.js"></script>
+<script src="../scripts/script.js"></script>
+
+</body>
+</html>
